@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func createRandomAccount(t *testing.T) Accounts {
+func createRandomAccount(t *testing.T) Account {
 	arg := CreateAccountParams{
 		Owner:    util.RandomOwner(),
 		Balance:  util.RandomMoney(),
@@ -72,7 +72,7 @@ func TestDeleteAccount(t *testing.T) {
 }
 
 func TestListAccounts(t *testing.T) {
-	var lastAccount Accounts
+	var lastAccount Account
 	for i := 0; i < 10; i++ {
 		lastAccount = createRandomAccount(t)
 	}
